@@ -4,9 +4,9 @@ var chalk = require("chalk");
 
 var score = 0;
 
-var username = inputVar.question(chalk.red.bgWhite.bold("Enter your name traveller?" ));
+var username = inputVar.question(chalk.black.bgWhite.bold("Enter your name traveller?\n" ));
 
-console.log(chalk.black.bgGreen.bold("Welcome to the Game ")+ chalk.black.bgGreen.bold(username));
+console.log(chalk.black.bgGreen.bold("Welcome to the Quiz ")+ chalk.black.bgGreen.bold(username));
 
 function play(q,a){
 
@@ -20,20 +20,20 @@ function play(q,a){
   }else{
 
     console.log(chalk.red("OOPS! that's a wrong answer."));
-    console.log(chalk.white('-------------------------------'))
+    
   }
-
+  console.log(chalk.cyan('-------------------------------'))
 }
 
 
 var gameQues = [
 
-    {question: "What is my favourite sport? ", answer: "Formula 1"},
-    {question:"Who is my favourite superhero? ", answer:"The Flash"},
-    {question:"What language am i learning? ", answer:"Japanese"},
-    {question:"The name of my favourite band- ", answer:"Linkin Park"},
-    {question:"What is my favourite Hobby? ", answer:"Gaming" },
-    {question:"My choice of country to live in- ", answer:"Japan"}
+    {question: "What is my favourite sport? \n", answer: "Formula 1"},
+    {question:"Who is my favourite superhero? \n", answer:"The Flash"},
+    {question:"What language am i learning? \n", answer:"Japanese"},
+    {question:"The name of my favourite band- \n", answer:"Linkin Park"},
+    {question:"What is my favourite Hobby? \n", answer:"Gaming" },
+    {question:"My choice of country to live in- \n", answer:"Japan"}
 
   ]
 
@@ -44,5 +44,5 @@ var gameQues = [
 
   }
 
-  console.log(chalk.cyan("THANKS FOR PLAYING THE GAME YOUR FINAL SCORE IS ") + chalk.green(score));
+  console.log(chalk.white("THANKS FOR PLAYING THE GAME YOUR FINAL SCORE IS ") + chalk.green(score));
 
